@@ -22,3 +22,7 @@ io.on("connection", socketManager);
 server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+// npm i redis 
+// brew i redis
+// redis-server
