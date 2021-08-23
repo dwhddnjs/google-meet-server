@@ -15,7 +15,12 @@ app.use([
   Routes,
 ]);
 
-const io = require("socket.io")(server);
+const io = (module.exports.io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+  },
+}));
+
 const socketManager = require("./app/socketManager");
 io.on("connection", socketManager);
 
@@ -23,6 +28,6 @@ server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-// npm i redis 
+// npm i redis
 // brew i redis
 // redis-server
