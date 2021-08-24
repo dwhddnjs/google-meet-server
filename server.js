@@ -20,6 +20,7 @@ const io = (module.exports.io = require("socket.io")(server, {
     origin: "*",
   },
 }));
+//cors error fixed it
 
 const socketManager = require("./app/socketManager");
 io.on("connection", socketManager);
