@@ -26,5 +26,5 @@ const socketManager = require("./app/socketManager");
 io.on("connection", socketManager);
 
 server.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on localhost:${port}`);
 });
